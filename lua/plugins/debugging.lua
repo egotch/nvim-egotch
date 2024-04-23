@@ -9,10 +9,12 @@ return {
   config = function()
     require("dapui").setup()
     require("dap-go").setup()
-    require("dap-python").setup()
+
+    local debugpy = "/home/Q2/egotkowski/.local/share/nvim/mason/packages/debugpy/venv/bin/python"
+    require("dap-python").setup(debugpy)
 
     local dap, dapui = require("dap"), require("dapui")
-
+    --this is a new line
     dap.listeners.before.attach.dapui_config = function()
       dapui.open()
     end

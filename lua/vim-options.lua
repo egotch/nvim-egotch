@@ -17,6 +17,12 @@ vim.keymap.set('n', '<c-l>', ':wincmd l<CR>')
 vim.keymap.set('n', '<leader>h', ':nohlsearch<CR>')
 vim.wo.number = true
 
+-- Folding
+vim.keymap.set('n', "-", "<cmd>foldclose<CR>", { desc = "Close code fold" })
+vim.keymap.set('n', "+", "<cmd>foldopen<CR>", { desc = "Open code fold" })
+vim.keymap.set('n', "<leader>zt", "<cmd>set foldmethod=indent<CR>", { desc = "fold by indent" })
+
+
 -- Tab switching easier
 vim.keymap.set('n', '<leader>t', 'gt')
 vim.keymap.set('n', '<leader>1', '1gt')
