@@ -10,7 +10,7 @@ return {
     require("dapui").setup()
     require("dap-go").setup()
 
-    local debugpy = "/home/Q2/egotkowski/.local/share/nvim/mason/packages/debugpy/venv/bin/python"
+    local debugpy = "~/.local/share/nvim/mason/packages/debugpy/venv/bin/python"
     require("dap-python").setup(debugpy)
 
     local dap, dapui = require("dap"), require("dapui")
