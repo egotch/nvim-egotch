@@ -14,4 +14,7 @@ vim.opt.rtp:prepend(lazypath)
 require("vim-options")
 require("lazy").setup("plugins")
 --vim.cmd.colorscheme "catppuccin-mocha"
-vim.cmd.colorscheme "tokyonight-night"
+--vim.cmd.colorscheme "tokyonight-night"
+--vim.cmd.colorscheme "abyss"
+vim.cmd.colorscheme("night-owl")
+--vim.cmd.colorscheme("nightfly")
