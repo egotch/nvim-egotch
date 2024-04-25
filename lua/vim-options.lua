@@ -34,3 +34,17 @@ vim.keymap.set('n', '<leader>6', '6gt')
 vim.keymap.set('n', '<leader>7', '7gt')
 vim.keymap.set('n', '<leader>8', '8gt')
 vim.keymap.set('n', '<leader>9', '9gt')
+
+-- diagnostics switching
+vim.api.nvim_create_user_command("DiagnosticToggle", function()
+	local config = vim.diagnostic.config
+	local vt = config().virtual_text
+	config {
+		virtual_text = not vt,
+		underline = not vt,
+		signs = not vt,
+	}
+end, { desc = "toggle diagnostic" })
+
+--vim.keymap.set('n', '<leader>i', ":lua vim.diagnostic.open_float(nil, {focus=true, scope='cursor'})<CR>", default_opts)
+vim.keymap.set('n', '<leader>i', ":lua vim.diagnostic.open_float()<CR>", default_opts)
