@@ -9,6 +9,7 @@ return {
   config = function()
     require("dapui").setup()
     require("dap-go").setup()
+    require('dap.ext.vscode').load_launchjs(nil, {})
 
     local debugpy = "~/.local/share/nvim/mason/packages/debugpy/venv/bin/python"
     require("dap-python").setup(debugpy)
@@ -28,9 +29,12 @@ return {
       dapui.close()
     end
 
-    vim.keymap.set("n", "<Leader>dt", ":DapToggleBreakpoint<CR>")
-    vim.keymap.set("n", "<Leader>dc", ":DapContinue<CR>")
+    vim.keymap.set("n", "<Leader>b", ":DapToggleBreakpoint<CR>")
+    vim.keymap.set("n", "<F5>", ":DapContinue<CR>")
+    vim.keymap.set("n", "<F8>", ":DapStepOver<CR>")
+    vim.keymap.set("n", "<F7>", ":DapStepInto<CR>")
     vim.keymap.set("n", "<Leader>dx", ":DapTerminate<CR>")
-    vim.keymap.set("n", "<Leader>do", ":DapStepOver<CR>")
+    vim.fn.sign_define('DapBreakpoint',{ text ='🟥', texthl ='', linehl ='', numhl =''})
+    vim.fn.sign_define('DapStopped',{ text ='▶️', texthl ='', linehl ='', numhl =''})
   end,
 }
