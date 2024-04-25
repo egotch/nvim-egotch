@@ -32,21 +32,21 @@ return {
       lspconfig.pyright.setup({
         capabilities = capabilities,
       })
-      lspconfig.pylsp.setup({
-        settings = {
-          pylsp = {
-            plugins = {
-              pycodestyle = {
-                maxLineLength = 200,
-
-              }
-            }
-          }
-        }
-      })
+--      lspconfig.pylsp.setup({
+--        settings = {
+--          pylsp = {
+--            plugins = {
+--              pycodestyle = {
+--                maxLineLength = 200,
+--
+--              }
+--            }
+--          }
+--        }
+--      })
 
       vim.keymap.set("n", "<c-q>", vim.lsp.buf.hover, {})
-      vim.keymap.set("n", "<c-b>", vim.lsp.buf.definition, {})
+      vim.keymap.set("n", "<c-w>", vim.lsp.buf.definition, {})
       vim.keymap.set("n", "<leader>gr", vim.lsp.buf.references, {})
       vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, {})
     end,
