@@ -41,10 +41,9 @@ vim.api.nvim_create_user_command("DiagnosticToggle", function()
 	local vt = config().virtual_text
 	config {
 		virtual_text = not vt,
-		underline = not vt,
-		signs = not vt,
+		--underline = not vt,
+		--signs = not vt,
 	}
 end, { desc = "toggle diagnostic" })
 
---vim.keymap.set('n', '<leader>i', ":lua vim.diagnostic.open_float(nil, {focus=true, scope='cursor'})<CR>", default_opts)
 vim.keymap.set('n', '<leader>i', ":lua vim.diagnostic.open_float()<CR>", default_opts)
