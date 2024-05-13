@@ -5,7 +5,6 @@ return {
     name = "catppuccin",
     priority = 1000,
     opts = {
-
       integrations = {
         aerial = true,
         alpha = true,
@@ -51,14 +50,14 @@ return {
     "folke/tokyonight.nvim",
     lazy = false,
     priority = 1000,
-    opts = {}
+    opts = {
+    }
   },
   {
     'barrientosvctor/abyss.nvim',
     lazy = false,
     priority = 1000,
     opts = {
-
       integrations = {
         aerial = true,
         alpha = true,
@@ -101,11 +100,19 @@ return {
     "oxfist/night-owl.nvim",
     lazy = false,
     priority = 1000,
-    opts = {}
+    opts = {
+    }
   },
   { "bluz71/vim-nightfly-colors",
     name = "nightfly",
     lazy = false,
     priority = 1000
+  },
+
+
+  transparent = true,
+  styles = {
+    sidebars = "transparent",
+    floats = "transparent",
   },
 }

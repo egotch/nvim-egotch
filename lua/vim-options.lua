@@ -4,7 +4,8 @@ vim.cmd("set softtabstop=2")
 vim.cmd("set shiftwidth=2")
 vim.cmd("set nu")
 vim.g.mapleader = " "
-vim.g.background = "light"
+-- vim.g.background = "light"
+vim.g.background = "none"
 
 vim.opt.swapfile = false
 
@@ -47,3 +48,5 @@ vim.api.nvim_create_user_command("DiagnosticToggle", function()
 end, { desc = "toggle diagnostic" })
 
 vim.keymap.set('n', '<leader>i', ":lua vim.diagnostic.open_float()<CR>", default_opts)
+
+vim.keymap.set('n', '<leader>*', ":highlight Normal guibg=none<CR> <BAR> :highlight NonText guibg=none<CR> <BAR> :highlight Normal ctermbg=none<CR> <BAR> :highlight NonText ctermbg=none<CR>")
