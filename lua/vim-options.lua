@@ -49,4 +49,4 @@ end, { desc = "toggle diagnostic" })
 
 vim.keymap.set('n', '<leader>i', ":lua vim.diagnostic.open_float()<CR>", default_opts)
 
-vim.keymap.set('n', '<leader>*', ":highlight Normal guibg=none<CR> <BAR> :highlight NonText guibg=none<CR> <BAR> :highlight Normal ctermbg=none<CR> <BAR> :highlight NonText ctermbg=none<CR>")
+vim.keymap.set('n', '<leader>*', ":highlight Normal guibg=none<CR> <BAR> :highlight NonText guibg=none<CR> <BAR> :highlight Normal ctermbg=none<CR> <BAR> :highlight NonText ctermbg=none<CR> <BAR> :highlight LineNr guibg=none<CR>")
