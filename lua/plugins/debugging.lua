@@ -35,6 +35,6 @@ return {
     vim.keymap.set("n", "<F7>", ":DapStepInto<CR>")
     vim.keymap.set("n", "<Leader>dx", ":DapTerminate<CR>")
     vim.fn.sign_define('DapBreakpoint',{ text ='🟥', texthl ='', linehl ='', numhl =''})
-    vim.fn.sign_define('DapStopped',{ text ='▶️', texthl ='', linehl ='', numhl =''})
+    vim.fn.sign_define('DapStopped',{ text ='', texthl ='', linehl ='', numhl =''})
   end,
 }
