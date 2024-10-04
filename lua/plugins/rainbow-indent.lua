@@ -17,17 +17,20 @@ return {
     })
 
     local highlight = {
-      "RainbowBlue",
-      "RainbowYellow",
       "RainbowViolet",
+      "RainbowYellow",
       "RainbowCyan",
       "RainbowRed",
       "RainbowOrange",
       "RainbowGreen",
     }
+    local scope_highlight = {
+      "RainbowPurple",
+    }
     local hooks = require("ibl.hooks")
 
     hooks.register(hooks.type.HIGHLIGHT_SETUP, function()
+      vim.api.nvim_set_hl(0, "RainbowPurple", { fg = "#9378dd" })
       vim.api.nvim_set_hl(0, "RainbowViolet", { fg = "#C678DD" })
       vim.api.nvim_set_hl(0, "RainbowCyan", { fg = "#56B6C2" })
       vim.api.nvim_set_hl(0, "RainbowRed", { fg = "#E06C75" })
@@ -38,8 +41,13 @@ return {
     end)
 
     require("ibl").setup({
-      scope = {
+      indent = {
         highlight = highlight,
+        char = "",
+      },
+      scope = {
+        char = "▎",
+        highlight = scope_highlight,
         show_start = false,
         show_end = false,
       },
