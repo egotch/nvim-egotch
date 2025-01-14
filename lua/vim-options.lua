@@ -7,7 +7,9 @@ vim.cmd("set nowrap")
 vim.cmd("set signcolumn=auto:4")
 vim.g.mapleader = " "
 -- vim.g.background = "light"
-vim.g.background = "none"
+-- vim.g.background = "none"
+vim.o.cursorline = true
+vim.o.cursorlineopt = 'both'
 
 vim.opt.swapfile = false
 
