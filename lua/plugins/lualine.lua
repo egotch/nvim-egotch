@@ -3,7 +3,7 @@ return {
   config = function()
     require("lualine").setup({
       options = {
-        theme = "nightfly",
+        theme = "abyss-boreal",
 
       },
       sections = {
