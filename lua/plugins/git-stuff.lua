@@ -13,6 +13,7 @@ return {
       vim.keymap.set("n", "<leader>gb", ":Gitsigns prev_hunk<CR>", {})
       vim.keymap.set("n", "<leader>gs", ":Gitsigns stage_hunk<CR>", {})
       vim.keymap.set("n", "<leader>gu", ":Gitsigns undo_stage_hunk<CR>", {})
+      vim.keymap.set("n", "<leader>gr", ":Gitsigns reset_hunk<CR>", {})
     end
   }
 }

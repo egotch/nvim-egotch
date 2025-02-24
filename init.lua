@@ -15,8 +15,7 @@ require("vim-options")
 require("lazy").setup("plugins")
 --vim.cmd.colorscheme "catppuccin-mocha"
 --vim.cmd.colorscheme "tokyonight-night"
---vim.cmd.colorscheme("nightfly")
-vim.cmd.colorscheme "abyss-boreal"
---vim.cmd.colorscheme("night-owl")
+-- vim.cmd.colorscheme "abyss-boreal"
+vim.cmd.colorscheme "nightfox"
 
 vim.treesitter.language.register("dockerfile", "Dockerfile")
