@@ -29,6 +29,39 @@ return {
       dapui.close()
     end
 
+    dap.configurations.python = {
+        {
+            type = 'python',
+            request = 'launch',
+            name = "Launch file",
+            program = "${file}",
+            justMyCode = false,
+            console = 'integratedTerminal',
+            },
+        {
+            type = 'python',
+            request = 'launch',
+            name = "Launch with arguments",
+            program = "${file}",
+            args = function ()
+                local args_string = vim.fn.input('Arguments: ')
+                return vim.split(args_string, " ")
+            end,
+            justMyCode = false,
+            console = "integratedTerminal",
+            },
+        {
+            type = 'python',
+            request = 'launch',
+            name = "Launch module",
+            module = function ()
+                return vim.fn.input('Module name: ')
+            end,
+            justMyCode = false,
+            console = "integratedTerminal",
+            },
+        }
+
     vim.keymap.set("n", "<Leader>b", ":DapToggleBreakpoint<CR>")
     vim.keymap.set("n", "<F5>", ":DapContinue<CR>")
     vim.keymap.set("n", "<F8>", ":DapStepOver<CR>")
