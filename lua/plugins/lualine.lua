@@ -4,7 +4,8 @@ return {
     require("lualine").setup({
       options = {
         -- theme = "abyss-boreal",
-        theme = "nightfox",
+        -- theme = "nightfox",
+        theme = "catppuccin",
 
       },
       sections = {

@@ -13,9 +13,9 @@ vim.opt.rtp:prepend(lazypath)
 
 require("vim-options")
 require("lazy").setup("plugins")
---vim.cmd.colorscheme "catppuccin-mocha"
+vim.cmd.colorscheme "catppuccin-mocha"
 --vim.cmd.colorscheme "tokyonight-night"
 -- vim.cmd.colorscheme "abyss-boreal"
-vim.cmd.colorscheme "nightfox"
+-- vim.cmd.colorscheme "nightfox"
 
 vim.treesitter.language.register("dockerfile", "Dockerfile")

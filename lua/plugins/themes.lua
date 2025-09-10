@@ -5,21 +5,14 @@ return {
     name = "catppuccin",
     priority = 1000,
     opts = {
+      -- transparent_background = true, -- Enable transparency
       integrations = {
         aerial = true,
         alpha = true,
-        --cmp = true,
-        --dashboard = true,
-        --flash = true,
         gitsigns = true,
-        --headlines = true,
-        --illuminate = true,
-        --indent_blankline = { enabled = true },
-        --leap = true,
         lsp_trouble = true,
         mason = true,
         markdown = true,
-        --mini = true,
         native_lsp = {
           enabled = true,
           underlines = {
@@ -29,9 +22,8 @@ return {
             information = { "undercurl" },
           },
         },
-        --navic = { enabled = true, custom_bg = "lualine" },
         neotest = true,
-        neotree = true,
+        neotree = true,  -- This enables Catppuccin theming for neo-tree icons
         noice = true,
         notify = true,
         semantic_tokens = true,
@@ -40,17 +32,18 @@ return {
         treesitter_context = true,
         which_key = true,
       },
-
-    }   --config = function()
-    --
-    -- vim.cmd.colorscheme "catppuccin-mocha"
-    --end
+    }
   },
   {
     "folke/tokyonight.nvim",
     lazy = false,
     priority = 1000,
     opts = {
+      -- transparent = true,
+      styles = {
+        sidebars = "transparent",
+        floats = "transparent",
+      },
     }
   },
   {
@@ -58,64 +51,25 @@ return {
     lazy = false,
     priority = 1000,
     opts = {
-      integrations = {
-        aerial = true,
-        alpha = true,
-        --cmp = true,
-        --dashboard = true,
-        --flash = true,
-        gitsigns = true,
-        --headlines = true,
-        --illuminate = true,
-        --indent_blankline = { enabled = true },
-        --leap = true,
-        lsp_trouble = true,
-        mason = true,
-        markdown = true,
-        --mini = true,
-        native_lsp = {
-          enabled = true,
-          underlines = {
-            errors = { "undercurl" },
-            hints = { "undercurl" },
-            warnings = { "undercurl" },
-            information = { "undercurl" },
-          },
-        },
-        --navic = { enabled = true, custom_bg = "lualine" },
-        neotest = true,
-        neotree = true,
-        noice = true,
-        notify = true,
-        semantic_tokens = true,
-        telescope = true,
-        treesitter = true,
-        treesitter_context = true,
-        which_key = true,
-      },
-
+      -- Remove the integrations from abyss.nvim as it doesn't use them
+      -- Abyss is a simple theme without integration configs
     }
   },
   {
     "oxfist/night-owl.nvim",
     lazy = false,
     priority = 1000,
-    opts = {
-    }
+    opts = {}
   },
-  { "bluz71/vim-nightfly-colors",
+  { 
+    "bluz71/vim-nightfly-colors",
     name = "nightfly",
     lazy = false,
     priority = 1000
   },
-  { "EdenEast/nightfox.nvim",
+  { 
+    "EdenEast/nightfox.nvim",
     lazy = false,
     priority = 1000
-  },
-
-  transparent = true,
-  styles = {
-    sidebars = "transparent",
-    floats = "transparent",
   },
 }
