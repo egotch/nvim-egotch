@@ -78,7 +78,7 @@ return {
     "williamboman/mason-lspconfig.nvim",
     config = function()
       require("mason-lspconfig").setup({
-        ensure_installed = { "lua_ls", "tsserver" },
+        ensure_installed = { "lua_ls" },
       })
     end,
   },
@@ -103,9 +103,6 @@ return {
       })
       lspconfig.lua_ls.setup({
 
-        capabilities = capabilities,
-      })
-      lspconfig.pyright.setup({
         capabilities = capabilities,
       })
 --      lspconfig.pylsp.setup({
